@@ -12,10 +12,21 @@ function ExpenseItems(props) {
   const clickHandler = () => {
     //  Updating the Value
 
-    setTitle(" Get Updated");
+    //setTitle(" Get Updated");
 
+    // Updating the Value with timer
+
+    setTimeout(() => {
+      changeSt(title);
+    }, 3000);
     console.log("CLICKED");
     console.log(title);
+  };
+
+  const changeSt = (title) => {
+    console.log("Called Me!");
+    if (title === "Car") setTitle("Bus");
+    else if (title === "Bus") setTitle("Car");
   };
 
   return (
@@ -27,6 +38,7 @@ function ExpenseItems(props) {
         <h2>{title}</h2>
         <div className="expense-item__price">Price {props.price} Rs</div>
       </div>
+
       <button onClick={clickHandler}> Default</button>
     </Card>
   );

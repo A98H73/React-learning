@@ -1,6 +1,8 @@
 import ExpenseItems from "./components/Expenses/ExpenseItems";
 import Card from "./components/UI/Card";
 import "./components/Expenses/Expenses.css";
+import ExpenseForm from "./components/Expenses/NewExpenses/ExpenseForm";
+import NewExpenses from "./components/Expenses/NewExpenses/NewExpenses";
 
 function App() {
   let expenses = [
@@ -13,7 +15,7 @@ function App() {
   return (
     <div>
       <h2>Let's get started bro!</h2>
-      <h5>That's a good start</h5>
+      <NewExpenses />
       <Card className="expenses">
         <ExpenseItems
           title={expenses[0].title}
