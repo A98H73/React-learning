@@ -12,10 +12,14 @@ function App() {
     { id: "t4", title: "Tank ", pricer: 7668686, date: new Date(2019, 7, 11) },
   ];
 
+  const addExpenseHandler = (addExpenseDate) => {
+    console.log("It's reach to App.js");
+  };
+
   return (
     <div>
       <h2>Let's get started bro!</h2>
-      <NewExpenses />
+      <NewExpenses onAddExpense={addExpenseHandler} />
       <Card className="expenses">
         <ExpenseItems
           title={expenses[0].title}
