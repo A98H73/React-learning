@@ -30,17 +30,19 @@ function ExpenseItems(props) {
   };
 
   return (
-    <Card className="expense-item">
-      {/* Here We can have same name for dateVal and datevalue as well */}
-      <ExpenseDate dateVal={props.datevalue} />
+    <li>
+      <Card className="expense-item">
+        {/* Here We can have same name for dateVal and datevalue as well */}
+        <ExpenseDate dateVal={props.datevalue} />
 
-      <div className="expense-item__description">
-        <h2>{title}</h2>
-        <div className="expense-item__price">Price {props.price} Rs</div>
-      </div>
+        <div className="expense-item__description">
+          <h2>{title}</h2>
+          <div className="expense-item__price">Price {props.price} Rs</div>
+        </div>
 
-      <button onClick={clickHandler}> Default</button>
-    </Card>
+        <button onClick={clickHandler}> Default</button>
+      </Card>
+    </li>
   );
 }
 
